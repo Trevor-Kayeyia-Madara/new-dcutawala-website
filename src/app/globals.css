@@ -638,6 +638,30 @@ p {
   }
 }
 
+@media (min-width: 1440px) {
+  .header-inner {
+    max-width: 1400px;
+    gap: 2rem;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .main-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .nav-list {
+    justify-content: center;
+  }
+
+  .header-actions {
+    flex: 0 0 auto;
+  }
+}
+
 @media (max-width: 400px) {
   .brand-loc {
     display: none;
