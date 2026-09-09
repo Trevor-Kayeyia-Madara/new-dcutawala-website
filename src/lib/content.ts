@@ -244,22 +244,22 @@ export const churchJourney: {
     {
       phase: "Foundation",
       title: "A Humble Beginning",
-      body: "In 2009, Deliverance Church Utawala was planted with a vision to reach the Utawala community and beyond with the transformative power of the gospel — a small congregation gathering at the Utawala shopping centre under a mabati (iron-sheet) structure.",
+      body: "In 2009, Deliverance Church Utawala began at the Utawala Shopping Centre with a simple but powerful vision: to reach the community and beyond with the transforming power of the gospel. From those humble beginnings, God was laying the foundation for a house built around His mission.",
     },
     {
       phase: "Growth",
       title: "Building Community",
-      body: "In 2010 the church moved to our current location on Utawala Road. From a small gathering we grew into a vibrant community of believers, establishing key ministries to serve different demographics.",
+      body: "In those early years, Pastor William Ouna faithfully served the growing congregation. Later, Rev. Emmanuel Kokonyo moved from Athi River to Utawala and became the Senior Pastor, helping lead the church into its next season of growth and deeper community.",
     },
     {
       phase: "Expansion",
       title: "Reaching More Souls",
-      body: "We launched outreach programs, community services, and the church school to impact the wider community and disciple the next generation. God's faithfulness has carried us from iron sheets to an auditorium that seats more than 1,500 worshippers.",
+      body: "By 2010, the church had moved to its current location on Utawala Road. From a small gathering, we grew into a vibrant family of believers, establishing ministries, outreach programmes, community service and the church school to disciple the next generation and serve the wider community.",
     },
     {
       phase: "Present",
       title: "Transforming Nations",
-      body: "Today, we continue to equip believers for the mission of God, expanding our vision to transform and empower Africa and beyond.",
+      body: "By God's grace, the church has continued to expand and now worships as a growing community in a facility with capacity for more than 1,500 people. Today, we continue to equip believers for the mission of God and pursue our vision to transform and empower Africa and beyond.",
     },
   ],
   lookingForward:
