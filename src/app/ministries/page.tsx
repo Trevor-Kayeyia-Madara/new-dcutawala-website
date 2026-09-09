@@ -49,7 +49,8 @@ export default function MinistriesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Worship Ministry"
-            title="Teams that lead us into presence"
+            title="Teams that lead us into His presence"
+            lede="Our worship teams help the church encounter God through worship, song and music."
             wide
           />
           <div className="card-grid card-grid--3">

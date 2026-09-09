@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { churchJourney, leaders, pastorWelcome, photos, siteConfig } from "@/lib/content";
+import { leaders, pastorWelcome, photos, siteConfig } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -26,34 +26,46 @@ export default function AboutPage() {
 
       <section className="section section--cream">
         <div className="container">
-          <SectionHeading
-            eyebrow="A Word From Our Senior Pastor"
-            title="Welcome to our family"
-          />
-          <div className="prose">
-            {pastorWelcome.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-            <div style={{ display: "grid", gap: "0.2rem", marginTop: "0.5rem" }}>
-              <span
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "1.35rem",
-                  color: "var(--chocolate)",
-                }}
-              >
-                {pastorWelcome.author}
-              </span>
-              <span className="card__subtitle">
-                {pastorWelcome.role} · {siteConfig.displayName}
-              </span>
+          <div className="two-col two-col--aside">
+            <div>
+              <SectionHeading
+                eyebrow="A Word From Our Senior Pastor"
+                title="Welcome to our family"
+              />
+              <div className="prose">
+                {pastorWelcome.paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+                <div style={{ display: "grid", gap: "0.2rem", marginTop: "0.5rem" }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "1.35rem",
+                      color: "var(--chocolate)",
+                    }}
+                  >
+                    {pastorWelcome.author}
+                  </span>
+                  <span className="card__subtitle">
+                    {pastorWelcome.role} · {siteConfig.displayName}
+                  </span>
+                </div>
+                {pastorWelcome.isSample && (
+                  <p className="tbc-note">
+                    Sample message — to be replaced with the Senior Pastor&apos;s
+                    own words
+                  </p>
+                )}
+              </div>
             </div>
-            {pastorWelcome.isSample && (
-              <p className="tbc-note">
-                Sample message — to be replaced with the Senior Pastor&apos;s
-                own words
-              </p>
-            )}
+            <Photo
+              src={photos.leadPastor}
+              alt="Rev. Emmanuel and Lucy Kokonyo, Lead Pastors"
+              mark="DC"
+              light
+              fallbackLabel="Lead Pastors"
+              style={{ minHeight: "24rem" }}
+            />
           </div>
         </div>
       </section>

@@ -187,8 +187,8 @@ export default function HomePage() {
             <div>
               <SectionHeading
                 eyebrow="Worship Ministry"
-                title="Worship Ministry"
-                lede="Our choirs and band lead the congregation into the presence of God across every service."
+                title="Teams that lead us into His presence"
+                lede="Our worship teams help the church encounter God through worship, song and music."
               />
               <p>
                 <Link className="link-arrow" href="/ministries#worship-ministry">

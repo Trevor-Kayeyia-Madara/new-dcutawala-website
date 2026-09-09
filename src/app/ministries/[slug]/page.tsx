@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { ministries, TBC } from "@/lib/content";
+import { ministries } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -34,9 +34,8 @@ export default async function MinistryPage({ params }: MinistryPageProps) {
   const details = [
     { label: "Purpose", value: ministry.purpose },
     { label: "Who it serves", value: ministry.serves ?? ministry.ageGroup },
-    { label: "Leadership", value: ministry.leadership },
     { label: "Meeting schedule", value: ministry.schedule },
-  ];
+  ].filter((detail) => detail.value);
 
   return (
     <>
@@ -71,38 +70,33 @@ export default async function MinistryPage({ params }: MinistryPageProps) {
                     <h3 className="footer-heading" style={{ color: "var(--gold-deep)" }}>
                       {detail.label}
                     </h3>
-                    <p className="prose">
-                      {detail.value ?? <span className="tbc-note">{TBC}</span>}
-                    </p>
+                    <p className="prose">{detail.value}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div style={{ display: "grid", gap: "1.5rem" }}>
-              <div>
-                <h3 className="footer-heading" style={{ color: "var(--gold-deep)" }}>
-                  Activities
-                </h3>
-                {ministry.activities ? (
+              {ministry.activities && (
+                <div>
+                  <h3 className="footer-heading" style={{ color: "var(--gold-deep)" }}>
+                    Activities
+                  </h3>
                   <ul className="footer-list" style={{ color: "var(--muted)" }}>
                     {ministry.activities.map((activity) => (
                       <li key={activity}>{activity}</li>
                     ))}
                   </ul>
-                ) : (
-                  <p className="tbc-note">{TBC}</p>
-                )}
-              </div>
-              <div>
-                <h3 className="footer-heading" style={{ color: "var(--gold-deep)" }}>
-                  Gallery
-                </h3>
-                <ImageGallery images={ministry.gallery ?? []} />
-                {(ministry.gallery?.length ?? 0) === 0 && (
-                  <p className="tbc-note">Photography {TBC}</p>
-                )}
-              </div>
+                </div>
+              )}
+              {ministry.gallery && ministry.gallery.length > 0 && (
+                <div>
+                  <h3 className="footer-heading" style={{ color: "var(--gold-deep)" }}>
+                    Gallery
+                  </h3>
+                  <ImageGallery images={ministry.gallery} />
+                </div>
+              )}
             </div>
           </div>
         </div>
