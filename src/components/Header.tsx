@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div className="container header-inner">
+      <div className="header-inner">
         <Link className="brand" href="/" aria-label={`${siteConfig.displayName} — home`}>
           {/* Official logo: never stretched, recoloured or filtered */}
           <img
