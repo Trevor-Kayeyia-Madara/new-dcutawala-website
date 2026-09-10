@@ -1158,7 +1158,8 @@ p {
 
 .hero-carousel {
   position: relative;
-  min-height: clamp(35rem, 70vh, 46rem);
+  /* 3:2 source photography: a taller frame retains more of each image. */
+  min-height: clamp(37rem, 58vw, 50rem);
 }
 
 .hero-slide {
@@ -1316,7 +1317,7 @@ p {
   }
 
   .hero-carousel {
-    min-height: 42rem;
+    min-height: 38rem;
   }
 
   .hero-slide__overlay {

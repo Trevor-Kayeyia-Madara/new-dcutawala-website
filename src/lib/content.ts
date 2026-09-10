@@ -33,9 +33,9 @@ export const siteConfig: SiteConfig = {
   visionSupport:
     "We envision a church that serves as a beacon of hope, transformation, and empowerment across Africa and the nations. Through excellence in worship, teaching, and service, we aim to be the church of choice for families seeking spiritual growth.",
   address: {
-    line1: "Utawala Road",
+    line1: "300m past ACK St. Monica",
     line2: "Utawala, Nairobi, Kenya",
-    full: "Utawala Road, Utawala, Nairobi, Kenya",
+    full: "300m past ACK St. Monica, Utawala, Nairobi, Kenya",
   },
   phone: "+254 723 102 273",
   phoneHref: "+254723102273",

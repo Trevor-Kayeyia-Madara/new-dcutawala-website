@@ -24,7 +24,7 @@ const slides = [
     image: "/photos/carousel-3.jpg",
     eyebrow: "Join us this Sunday",
     title: <>Come as you are. <em>Worship with us.</em></>,
-    lede: "Gather with us on Utawala Road in Nairobi at 6:30 AM or 9:30 AM.",
+    lede: "We are located 300m past ACK St. Monica, Utawala, Nairobi. Our 1st Sunday service starts at 6:30 AM and the 2nd service at 9:30 AM. Welcome!",
     primary: { href: "/plan-your-visit", label: "Plan Your Visit" },
     secondary: { href: "/services", label: "View Services" },
   },

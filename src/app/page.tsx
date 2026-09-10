@@ -39,11 +39,11 @@ export default function HomePage() {
             <dl className="hero-strip-inner">
               <div className="hero-fact">
                 <dt>Location</dt>
-                <dd>Utawala Road, Utawala, Nairobi</dd>
+                <dd>300m past ACK St. Monica, Utawala, Nairobi</dd>
               </div>
               <div className="hero-fact">
                 <dt>Sundays</dt>
-                <dd>6:30 AM &amp; 9:30 AM</dd>
+                <dd>1st: 6:30 AM · 2nd: 9:30 AM</dd>
               </div>
               <div className="hero-fact">
                 <dt>Lead Pastors</dt>
