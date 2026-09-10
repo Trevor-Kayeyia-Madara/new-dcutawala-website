@@ -1151,29 +1151,86 @@ p {
 
 .hero {
   position: relative;
-  background:
-    radial-gradient(90% 70% at 85% 0%, rgba(215, 143, 53, 0.22), transparent 60%),
-    radial-gradient(60% 50% at 10% 100%, rgba(193, 146, 46, 0.16), transparent 65%),
-    var(--espresso);
+  background: var(--espresso);
   color: var(--sand);
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
+.hero-carousel {
+  position: relative;
+  min-height: clamp(35rem, 70vh, 46rem);
+}
+
+.hero-slide {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 L30 16 L16 30 L2 16 Z' fill='none' stroke='%23e2b64c' stroke-opacity='0.07' stroke-width='1'/%3E%3C/svg%3E");
-  background-size: 32px 32px;
-  pointer-events: none;
+  display: grid;
+  align-items: stretch;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 700ms ease, visibility 700ms ease;
+}
+
+.hero-slide--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-slide__image,
+.hero-slide__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide__image {
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.03);
+  transition: transform 7s ease-out;
+}
+
+.hero-slide--active .hero-slide__image {
+  transform: scale(1.1);
+}
+
+.hero-slide__overlay {
+  background: linear-gradient(90deg, rgba(32, 19, 9, 0.93) 0%, rgba(32, 19, 9, 0.78) 45%, rgba(32, 19, 9, 0.35) 100%);
 }
 
 .hero-inner {
   position: relative;
+  z-index: 1;
   padding-block: clamp(4.5rem, 11vw, 9rem);
   display: grid;
   gap: 1.75rem;
   max-width: 56rem;
+}
+
+.hero-carousel__controls {
+  position: absolute;
+  z-index: 2;
+  inset-inline: 0;
+  bottom: 2rem;
+}
+
+.hero-carousel__dots {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.hero-carousel__dot {
+  width: 2.5rem;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  background: rgba(251, 248, 241, 0.45);
+  cursor: pointer;
+  transition: background-color 200ms ease, width 200ms ease;
+}
+
+.hero-carousel__dot--active {
+  width: 4rem;
+  background: var(--gold-bright);
 }
 
 .hero .eyebrow {
@@ -1258,9 +1315,25 @@ p {
     width: 100%;
   }
 
+  .hero-carousel {
+    min-height: 42rem;
+  }
+
+  .hero-slide__overlay {
+    background: linear-gradient(90deg, rgba(32, 19, 9, 0.94), rgba(32, 19, 9, 0.68));
+  }
+
   .hero-strip-inner {
     grid-template-columns: 1fr;
     gap: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide,
+  .hero-slide__image,
+  .hero-carousel__dot {
+    transition: none;
   }
 }
 

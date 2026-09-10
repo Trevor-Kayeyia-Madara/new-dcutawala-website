@@ -17,6 +17,7 @@ import { ServiceSchedule } from "@/components/ServiceSchedule";
 import { Photo } from "@/components/Photo";
 import { EmptyState } from "@/components/EmptyState";
 import { CopyButton } from "@/components/CopyButton";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import {
   GivingCard,
   LeaderCard,
@@ -32,26 +33,7 @@ export default function HomePage() {
     <>
       {/* ------------------------------------------------ HERO */}
       <section className="hero">
-        <div className="container">
-          <div className="hero-inner">
-            <span className="eyebrow rise">Deliverance Church Utawala</span>
-            <h1 className="hero-title rise rise-1">
-              Equipping mankind for the <em>mission of God.</em>
-            </h1>
-            <p className="hero-lede rise rise-2">
-              An Apostolic church committed to transforming and empowering
-              mankind in Africa and beyond.
-            </p>
-            <div className="hero-actions rise rise-3">
-              <Link className="btn btn--gold" href="/plan-your-visit">
-                Plan Your Visit
-              </Link>
-              <Link className="btn btn--light" href="/about">
-                Discover Who We Are
-              </Link>
-            </div>
-          </div>
-        </div>
+        <HeroCarousel />
         <div className="hero-strip">
           <div className="container">
             <dl className="hero-strip-inner">
