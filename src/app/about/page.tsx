@@ -187,6 +187,14 @@ export default function AboutPage() {
                   humble beginning at Utawala Shopping Centre to a growing
                   church family with a vision for Africa and beyond.
                 </p>
+                <p>
+                  By the grace of God, that vision has multiplied beyond our
+                  local congregation as we have planted churches and sent the
+                  gospel into new communities. This fruit includes Deliverance
+                  Church Berea-Katani, Deliverance Church Valley View and New
+                  Deliverance Church Int&apos;l Mwanza, Tanzania — expressions of
+                  one spiritual family carrying the mission of Christ forward.
+                </p>
               </div>
             </div>
           </div>
