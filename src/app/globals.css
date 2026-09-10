@@ -1158,8 +1158,8 @@ p {
 
 .hero-carousel {
   position: relative;
-  /* The supplied photography is 3:2; retain that generous photo-first framing. */
-  min-height: clamp(42rem, 66.667vw, 64rem);
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .hero-slide {
@@ -1320,7 +1320,8 @@ p {
   }
 
   .hero-carousel {
-    min-height: 43rem;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   .hero-slide__overlay {
