@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
 
 const slides = [
   {
@@ -48,7 +49,10 @@ export function HeroCarousel() {
           key={slide.image}
           aria-hidden={index !== activeSlide}
         >
-          <div className="hero-slide__image" style={{ backgroundImage: `url(${slide.image})` }} />
+          <div
+            className="hero-slide__image"
+            style={{ "--hero-image": `url(${slide.image})` } as CSSProperties}
+          />
           <div className="hero-slide__overlay" />
           <div className="container">
             <div className="hero-inner">

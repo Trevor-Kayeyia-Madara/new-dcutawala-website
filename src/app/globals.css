@@ -1184,14 +1184,29 @@ p {
 }
 
 .hero-slide__image {
-  background-position: center;
-  background-size: cover;
-  transform: scale(1.03);
-  transition: transform 7s ease-out;
+  overflow: hidden;
+  background: var(--espresso);
 }
 
-.hero-slide--active .hero-slide__image {
-  transform: scale(1.1);
+.hero-slide__image::before,
+.hero-slide__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-slide__image::before {
+  background-size: cover;
+  filter: blur(18px);
+  opacity: 0.42;
+  transform: scale(1.07);
+}
+
+.hero-slide__image::after {
+  background-size: contain;
 }
 
 .hero-slide__overlay {
@@ -1339,7 +1354,6 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-slide,
-  .hero-slide__image,
   .hero-carousel__dot {
     transition: none;
   }
