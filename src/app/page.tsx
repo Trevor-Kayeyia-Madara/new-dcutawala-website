@@ -34,28 +34,6 @@ export default function HomePage() {
       {/* ------------------------------------------------ HERO */}
       <section className="hero">
         <HeroCarousel />
-        <div className="hero-strip">
-          <div className="container">
-            <dl className="hero-strip-inner">
-              <div className="hero-fact">
-                <dt>Location</dt>
-                <dd>300m past ACK St. Monica, Utawala, Nairobi</dd>
-              </div>
-              <div className="hero-fact">
-                <dt>Sundays</dt>
-                <dd>1st: 6:30 AM · 2nd: 9:30 AM</dd>
-              </div>
-              <div className="hero-fact">
-                <dt>Lead Pastors</dt>
-                <dd>Rev. Emmanuel &amp; Lucy Kokonyo</dd>
-              </div>
-              <div className="hero-fact">
-                <dt>Identity</dt>
-                <dd>{siteConfig.tagline}</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
       </section>
 
       {/* ------------------------------------------------ JOIN US */}
